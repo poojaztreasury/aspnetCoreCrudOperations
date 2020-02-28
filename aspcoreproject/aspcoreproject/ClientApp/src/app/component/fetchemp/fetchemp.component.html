@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+  <a [routerLink]='["/create"]'>Add New</a>
+  <table border="1">
+    <tr>
+      <th>Number</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Salary</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    <tr *ngFor="let e of empList">
+      <td>{{e.eid}}</td>
+      <td>{{e.ename}}</td>
+      <td>{{e.edept}}</td>
+      <td>{{e.esalary}}</td>
+      <td><a [routerLink]="['/emp/Find_Rec/',e.eid]">Edit</a></td>
+      <td><a [routerLink]="" (click)="delete(e.eid)">Delete</a></td>
+
+    </tr>
+  </table>
+
+</body>
+</html>

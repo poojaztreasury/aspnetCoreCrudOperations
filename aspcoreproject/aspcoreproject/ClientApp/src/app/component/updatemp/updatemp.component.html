@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+  <form class="form" [formGroup]="employeeForm" (ngSubmit)="update()" #ngForm="ngForm" novalidate>
+
+    <table border="1">
+      <tr>
+        <td>
+          Emp Id
+        </td>
+        <td>
+          <input type="text" class="form-control" formControlName="eid" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Emp Name
+        </td>
+        <td>
+          <input type="text" class="form-control" formControlName="ename" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Emp Department
+        </td>
+        <td>
+          <input type="text" class="form-control" formControlName="edept" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Emp Salary
+        </td>
+        <td>
+          <input type="text" class="form-control" formControlName="esalary" />
+        </td>
+      </tr>
+      <tr>
+        <td><button type="submit">Update</button></td>
+        <td><button (click)="cancel()">Cancel</button></td>
+      </tr>
+    </table>
+
+  </form>
+</body>
+</html>
